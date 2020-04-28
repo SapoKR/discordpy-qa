@@ -3,7 +3,7 @@ from discord.ext import commands
 
 data = dict()
 
-class bot(commands.Cog):
+class qa(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     @commands.Cog.listener()
@@ -22,4 +22,4 @@ class bot(commands.Cog):
         await msg.send('성공')
 
 def setup(bot):
-    bot.add_cog(bot(bot))
+    bot.add_cog(qa(bot))
