@@ -20,3 +20,6 @@ class bot(commands.Cog):
     async def 커맨드생성(self, msg, a, b):
         data[a] = b
         await msg.send('성공')
+
+def setup(bot):
+    bot.add_cog(bot(bot))
