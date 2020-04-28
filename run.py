@@ -6,9 +6,9 @@ TOKEN = 'token'
 class qabot(commands.Bot):
     def __init__(self):
         super().__init__(command_prefix=["!"])
-        self.load_extension('bot')
+        self.load_extension('qa')
 
-    async def on_readys(self):
+    async def on_ready(self):
         print(self.user.name, 'Ready!')
         print('\n')
 
