@@ -9,7 +9,7 @@ class qa(commands.Cog):
     @commands.Cog.listener()
     async def on_message(self, message):
         msg = message.content
-        if msg.author.id == self.bot.user.id:
+        if msessage.author.id == self.bot.user.id:
             pass
         else:
             for i in data:
