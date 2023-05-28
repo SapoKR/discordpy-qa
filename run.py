@@ -1,5 +1,8 @@
 import discord
 from discord.ext import commands
+import logging
+
+logging.basicConfig(level=logging.INFO)
 
 TOKEN = 'token'
 
@@ -9,8 +12,7 @@ class qabot(commands.Bot):
         self.load_extension('qa')
 
     async def on_ready(self):
-        print(self.user.name, 'Ready!')
-        print('\n')
+        logging.info(f'{self.user.name} Ready!\n')
 
     async def on_message(self, msg):
         await self.process_commands(msg)
